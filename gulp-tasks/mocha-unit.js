@@ -1,10 +1,10 @@
-var babel    = require("babel-register"),
-    gulp     = require("gulp"),
-    isparta  = require("isparta"),
-    istanbul = require("gulp-istanbul"),
-    mocha    = require("gulp-mocha");
+var babel    = require('babel-register'),
+    gulp     = require('gulp'),
+    isparta  = require('isparta'),
+    istanbul = require('gulp-istanbul'),
+    mocha    = require('gulp-mocha');
 
-    module.exports = function (done) {
+module.exports = function (done) {
     gulp.src([
 
     ])
@@ -13,13 +13,13 @@ var babel    = require("babel-register"),
         includeUntested: true
     }))
     .pipe(istanbul.hookRequire())
-    .on("finish", function () {
-        gulp.src(["test/**/*.js"])
+    .on('finish', function () {
+        gulp.src(['test/**/*.js'])
             .pipe(mocha({
                 compilers: {
                     js: babel
                 },
-                reporter: "spec",
+                reporter: 'spec',
                 bail: true,
                 timeout: 30000
             }))
@@ -28,6 +28,6 @@ var babel    = require("babel-register"),
             .pipe(istanbul.enforceThresholds({
                 thresholds: {global: 100}
             }))
-            .on("end", done);
+            .on('end', done);
     });
-    };
+};
