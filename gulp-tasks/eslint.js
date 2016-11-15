@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 module.exports = function () {
     return gulp.src(['**/*.js',
         '!node_modules/**/*.js',
-        '!coverage/**/*.js'
+        '!coverage/**/*.js',
+        '!public/javascripts/main.js'
     ])
     .pipe(eslint())
     .pipe(eslint.format())

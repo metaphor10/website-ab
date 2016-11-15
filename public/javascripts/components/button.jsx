@@ -1,8 +1,6 @@
-var React = require("react");
-    var ReactDOM = require("react-dom");
-
-
-    var LikeButton = React.createClass({
+var React = require('react'),
+    ReactDOM = require('react-dom'),
+    LikeButton = React.createClass({
     getInitialState: function() {
     return {liked: false};
     },
@@ -10,7 +8,7 @@ var React = require("react");
     this.setState({liked: !this.state.liked});
     },
     render: function() {
-    var text = this.state.liked ? "like" : "havent liked";
+    var text = this.state.liked ? 'like' : 'havent liked';
     return (
       <p onClick={this.handleClick}>
         You {text} this. Click to toggle.
@@ -18,4 +16,4 @@ var React = require("react");
     );
     }
     });
-    module.exports =  LikeButton;
+module.exports =  LikeButton;

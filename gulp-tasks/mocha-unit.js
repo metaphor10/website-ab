@@ -1,4 +1,6 @@
-var babel    = require('babel-register'),
+var babel    = require('babel-register')({
+        presets: [ 'es2015' ]
+    }),
     gulp     = require('gulp'),
     isparta  = require('isparta'),
     istanbul = require('gulp-istanbul'),
