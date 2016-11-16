@@ -5,8 +5,6 @@ var React       = require('react'),
     div         = document.getElementById('one'),
     button      = document.getElementById('example');
 
-
-
 ReactDOM.render(new MessageList(), div);
 ReactDOM.render(new LikeButton(), button);
 
