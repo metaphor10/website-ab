@@ -6,13 +6,11 @@ var React = require('react'),
     express = require('express'),
     router = express.Router(),
     MessageList = React.createFactory(require('../public/javascripts/components/helloWorld.jsx')),
-    LikeButton  = React.createFactory(require('../public/javascripts/components/button.jsx')),
-    htmlReact = reactDOMServer.renderToString(new MessageList()),
-    likeButton = reactDOMServer.renderToString(new LikeButton());
+    htmlReact = reactDOMServer.renderToString(new MessageList());
 
     /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('index', { title: 'Express', htmlReact: htmlReact, likeButton: likeButton });
+    res.render('index', {title: 'Hello World welcome to our awossome site', htmlReact: htmlReact});
 });
 
 module.exports = router;
