@@ -7,16 +7,15 @@ var React = require("react");
             render:function(){
                 return (
                     <div>
-                        hello world
+                        <h1>Hello world! </h1>
                         <LikeButton/>
-                            <div className = "first">
-                                <div className = "innerone"> one </div>
-                                <div className = "innertwo"> two </div> 
-                            </div>
+                        <div className = "first">
+                            <div className = "innerone"> one </div>
+                            <div className = "innertwo"> two </div> 
+                        </div>
                     </div>
                 )
             }
         });
 
     module.exports =  MessageList;
-

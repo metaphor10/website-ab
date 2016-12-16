@@ -8,10 +8,9 @@ var React = require('react'),
     MessageList = React.createFactory(require('../public/javascripts/components/helloWorld.jsx')),
     htmlReact = reactDOMServer.renderToString(new MessageList());
 
-    /* GET home page. */
+/* GET home page. */
 router.get('/', function(req, res) {
-    res.render('index', {title: 'Hello World welcome to our awossome site', htmlReact: htmlReact});
+    res.render('index', {title: 'Hello World, welcome to our awesome site', htmlReact: htmlReact});
 });
 
 module.exports = router;
-
