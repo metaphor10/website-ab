@@ -10,7 +10,7 @@ var React = require('react'),
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('index', {title: 'Hello World, welcome to our awesome site', htmlReact: htmlReact});
+    res.render('index', {title: 'Hello World, AU ACM', htmlReact: htmlReact});
 });
 
 module.exports = router;
